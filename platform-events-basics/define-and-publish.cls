@@ -28,3 +28,27 @@ for (Database.SaveResult sr : results) {
         }
     }
 }
+
+// 
+// publish event messages using salesforce APIs
+// example using REST:
+
+// sObject REST endpoint: /services/data/v45.0/sobjects/Cloud_News__e/
+
+// request body for a POST request:
+{
+   "Location__c" : "Mountain City",
+   "Urgent__c" : true,
+   "News_Content__c" : "Lake Road is closed due to mudslides."
+}
+
+/* output:
+HTTP/1.1 201 Created
+{
+   "id" : "e00xx000000000B",
+   "success" : true,
+   "errors" : [ ],
+   "warnings" : [ ]
+}
+*/
+
